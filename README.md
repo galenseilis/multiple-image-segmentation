@@ -1,11 +1,11 @@
 # Multiple Image Segmentation
 
 ## Original Image
-![fire](fire.jpg =1x1)
+![fire](https://github.com/galenseilis/multiple-image-segmentation/blob/main/fire.jpg)
 
 
 ## Segmented Examples
-![grid](grid.png =1x)
+![grid](https://github.com/galenseilis/multiple-image-segmentation/blob/main/grid.png)
 
 ## Usage
 
