@@ -31,7 +31,7 @@ def segment_image(image, n_segments):
     for label in np.unique(image_slic):
         for i in range(3):
             image[:,:,i][image_slic == label] = np.mean(image[:,:,i][image_slic == label])
-    plt.imsave(f'segmented_{n_segments}.png', image)
+    plt.imsave(f'segmented_{str(n_segments).zfill(6)}.png', image)
     print(time.ctime(), n_segments)
 
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     parser.add_argument("-p", "--cpu", type=int, default=len(os.sched_getaffinity(0)), help="Number of processors/CPUs to use.")
     parser.add_argument("-s", "--start", type=int, default=1, help="Starting number of segments.")
     parser.add_argument("-e", "--end", type=int, default=16, help="Ending number of segments.")
-    parser.add_argument("-f", "--flip", type=int, default=0, help="Ending number of segments.")
+    parser.add_argument("-f", "--flip", type=int, default=0, help="Rotate image by 180 degrees.")
     args = parser.parse_args()
 
     file = args.in_file
